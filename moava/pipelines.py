@@ -33,12 +33,14 @@ class FirebasePipeline(object):
     def process_item(self, item, spider):
         for youtube_id in item["youtube_ids"]:
             uid = item["site"] + item["post_id"] + youtube_id
-            self.db.child("videos").child(uid).set({
-                "site": item["site"],
-                "post_id": item["post_id"],
-                "title": item["title"],
-                "youtube_id": youtube_id,
-                "created": time.time()
-            })
+            v = self.db.child("videos").child(uid).shallow().get()
+            if v.val() is None:
+                self.db.child("videos").child(uid).set({
+                    "site": item["site"],
+                    "post_id": item["post_id"],
+                    "title": item["title"],
+                    "youtube_id": youtube_id,
+                    "created": time.time()
+                })
         raise DropItem()
         #return item

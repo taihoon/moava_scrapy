@@ -161,5 +161,6 @@ $RECYCLE.BIN/
 *.lnk
 
 moava/configs/firebase.py
+moava/fbtest.py
 
 # End of https://www.gitignore.io/api/osx,git,python,windows,visualstudiocode
