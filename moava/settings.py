@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from .configs import firebase
-from .configs import clien, ddanzi, mlbpark, todayhumor
+from .configs import clien, ddanzi, mlbpark, todayhumor, bobaedream
 
-CUSTOM_SETTINGS = [clien.SETTINGS, ddanzi.SETTINGS, mlbpark.SETTINGS, todayhumor.SETTINGS]
+CUSTOM_SETTINGS = [clien.SETTINGS, ddanzi.SETTINGS, mlbpark.SETTINGS, todayhumor.SETTINGS, bobaedream.SETTINGS]
 FIREBASE_CONFIG = firebase.CONFIG
 # Scrapy settings for moava project
 #

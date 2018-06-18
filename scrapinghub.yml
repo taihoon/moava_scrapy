@@ -1,5 +1,5 @@
 project: 240584
-version: '1.9'
+version: '1.10'
 stacks:
     default: scrapy:1.5-py3
 requirements:
